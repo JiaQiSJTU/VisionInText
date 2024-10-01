@@ -9,7 +9,7 @@ Understanding visual semantics embedded in consecutive characters is a crucial c
 Clone this repo into your working directory and setup the environment:
 
 ```python
-git clone git@github.com:JiaQiSJTU/ASCIIEval.git
+git clone xxx
 cd ASCIIEval
 conda create -n ascii python=3.10
 conda activate ascii
