@@ -1,0 +1,14 @@
+openai==1.35.4
+pillow==10.4.0
+scikit-learn==0.24.0
+scipy==1.10.1
+sentencepiece==0.2.0
+tensorboard==2.7.0
+together==1.2.1
+tokenizers==0.19.1
+torch==2.3.1
+torchtext==0.18.0
+torchvision==0.18.1
+tqdm==4.66.4
+transformers==4.41.2
+triton==2.3.1
