@@ -97,7 +97,7 @@ def main(args):
 if __name__=="__main__":
 
     parser = argparse.ArgumentParser(description="simulation conversation collection")
-    parser.add_argument("--test_file_path", type=str, default="./test_set_all/test.jsonl")
+    parser.add_argument("--test_file_path", type=str, default="./data/test/test.jsonl")
     parser.add_argument("--model_dir", type=str, default="/Models/vicuna-7b-v1.5")
     parser.add_argument("--model_template", type=str, default="alpaca") # Yi-34b-chat
     parser.add_argument("--output_file_path", type=str, default="./evaluations/text/tmp.json")

@@ -1,6 +1,6 @@
-CUDA_VISIBLE_DEVICES="0" python3 src/eval/train_llama3.py \
+CUDA_VISIBLE_DEVICES="0" python3 src/train_llama3.py \
     --model_name_or_path /Models/llava-v1.6-mistral-7b-hf \
-    --model_type LLM \
+    --model_type MLLM \
     --mode random \
     --conv_template_name mistral_instruct \
     --data_dir ./data/train/ \

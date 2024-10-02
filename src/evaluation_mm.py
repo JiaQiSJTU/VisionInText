@@ -20,15 +20,15 @@ from utils.load_dataset import AsciiDataset
 from utils.conversations_mm import conv_templates
 from utils.post_processing import *
 
-from yi_llava.conversation import conv_templates as yi_conv_templates
-from yi_llava.mm_utils import (
-    KeywordsStoppingCriteria,
-    expand2square,
-    get_model_name_from_path,
-    load_pretrained_model,
-    tokenizer_image_token,
-)
-from yi_llava.model.constants import DEFAULT_IMAGE_TOKEN, IMAGE_TOKEN_INDEX, key_info
+# from yi_llava.conversation import conv_templates as yi_conv_templates
+# from yi_llava.mm_utils import (
+#     KeywordsStoppingCriteria,
+#     expand2square,
+#     get_model_name_from_path,
+#     load_pretrained_model,
+#     tokenizer_image_token,
+# )
+# from yi_llava.model.constants import DEFAULT_IMAGE_TOKEN, IMAGE_TOKEN_INDEX, key_info
 from utils.prompts import *
 
 
@@ -362,10 +362,10 @@ def main(args):
 if __name__=="__main__":
 
     parser = argparse.ArgumentParser(description="simulation conversation collection")
-    parser.add_argument("--test_file_path", type=str, default="./test_set_all/test.jsonl")
-    parser.add_argument("--image_dir", type=str, default="./test_set_all/img")
+    parser.add_argument("--test_file_path", type=str, default="./data/test/test.jsonl")
+    parser.add_argument("--image_dir", type=str, default="./data/test/img")
     parser.add_argument("--model_dir", type=str, default="/Models/llava-v1.5-7b-hf")
-    parser.add_argument("--output_file_path", type=str, default="./evaluations/mm/llava-v1.5-7b-hf-both.json")
+    parser.add_argument("--output_file_path", type=str, default="./evaluations/MLLM/llava-v1.5-7b-hf-both.json")
     parser.add_argument("--mode", type=str, default="both", help="text-only, image-only, both")
     parser.add_argument("--peft_model_dir", type=str, default=None)
 

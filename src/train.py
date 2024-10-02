@@ -42,7 +42,7 @@ class DataArguments:
     data_dir: str = field(default=None, metadata={"help": "directory of the training data."})
     train_filename: str = field(default=None, metadata={"help": "filename of the training data."})
 
-    model_type: str = field(default="LLM", metadata={"help": "LLM or VLLM"})
+    model_type: str = field(default="LLM", metadata={"help": "LLM or MLLM"})
     mode: str = field(default="random", metadata={"help": "random, text-only, image-only, both"})
 
 @dataclass
@@ -96,7 +96,7 @@ class DataCollatorForSupervisedDataset(object):
 
                 labels[source_idx, :len(self.processor.tokenize(source))] = IGNORE_INDEX
         
-        elif self.model_type=="VLLM":
+        elif self.model_type=="MLLM":
             
             for instance in instances:
                 prompt_list = ["image-only", "text-only", "both"]
@@ -180,7 +180,7 @@ def train():
         CurrentModel = AutoModelForCausalLM
         CurrentProcessor = AutoTokenizer
 
-    elif data_args.model_type == "VLLM":
+    elif data_args.model_type == "MLLM":
         CurrentModel = LlavaNextForConditionalGeneration
         CurrentProcessor = LlavaNextProcessor
 
