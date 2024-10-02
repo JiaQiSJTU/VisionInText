@@ -1,4 +1,4 @@
-CUDA_VISIBLE_DEVICES="0" python3 src/train_llama3.py \
+CUDA_VISIBLE_DEVICES="0" python3 src/train.py \
     --model_name_or_path /Models/Meta-Llama-3.1-8B-Instruct \
     --model_type LLM \
     --conv_template_name llama-3 \

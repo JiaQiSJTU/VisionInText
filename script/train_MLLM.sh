@@ -1,4 +1,4 @@
-CUDA_VISIBLE_DEVICES="0" python3 src/train_llama3.py \
+CUDA_VISIBLE_DEVICES="0" python3 src/train.py \
     --model_name_or_path /Models/llava-v1.6-mistral-7b-hf \
     --model_type MLLM \
     --mode random \

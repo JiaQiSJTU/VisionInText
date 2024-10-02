@@ -36,7 +36,7 @@ Here are descriptions for some important properties of each sample:
 * `labels`: the corresponding label for each choice.
 * `image_path`: the path to the image modality of the ASCII art.
 
-We appreciate the fantanstic art created by ASCII artists. To focus on measuring the visual perception abilities of models, we made slight modifications to the original ASCII art crawled online. We also keep the original ASCII art (`original_ascii_art` ) in ASCIIEval. The released dataset is restricted to academic use.
+We highly appreciate the fantastic art created by ASCII artists. To focus on measuring the visual perception abilities of models, we made slight modifications to the original ASCII art for data in the test set, i.e. ASCIIEval. We also kept the original ASCII art (`original_ascii_art`) and the URL (`url`) to the data source. Our data is licensed by CC BY NC 4.0 (allowing only non-commercial use).
 
 
 ## Evaluation
