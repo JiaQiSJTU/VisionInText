@@ -23,13 +23,13 @@ Major requirements are listed in `requirements.txt`. The specific version of the
 
 Some examplified training (ASCIITune) and test data (ASCIIEval) are provided in `./data`. 
 
-To begin with, please collect the images for each ascii art by:
+To begin with, please collect the images for each ASCII art by:
 ```python
 bash script/prepare_data.sh
 ```
 
 Here are descriptions for some important properties of each sample:
-* `url`: the source website.
+* `url`: the source webpage.
 * `ascii_art`: the text string of the ASCII art.
 * `category-1/2/3`: the class/group/concept depicted in the ASCII art.
 * `choices`: the positive and negative choices for the ascii art recognition task.
