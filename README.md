@@ -138,7 +138,20 @@ Here, `mode` represents different input modality setting, including `text-only`,
 
 ### MLLM Leaderboard
 
-
+|                         | Text-only | Image-only | Text-Image | AVG   |
+|-------------------------|-----------|------------|------------|-------|
+| GPT-4o                  | 42.88     | 82.68      | 76.52      | 67.36 |
+| CogVLM2-Llama3-chat-19B | 24.73     | 67.80      | 66.68      | 53.07 |
+| Llava-v1.6-34B          | 28.62     | 65.66      | 61.33      | 51.87 |
+| Gemini-1.5-pro          | 33.49     | 60.69      | 58.33      | 50.84 |
+| Llava-v1.5-13B          | 26.00     | 61.87      | 60.70      | 49.52 |
+| Llava-v1.5-7B           | 24.66     | 62.18      | 61.52      | 49.45 |
+| Llava-v1.6-mistral-7B   | 25.89     | 60.72      | 59.02      | 48.54 |
+| Llava-v1.6-vicuna-13B   | 26.03     | 59.70      | 56.55      | 47.43 |
+| CogVLM-Chat-hf          | 21.25     | 61.00      | 57.58      | 46.61 |
+| Qwen-VL-Chat            | 24.79     | 52.32      | 40.09      | 39.10 |
+| Chameleon-30B           | 0.01      | 34.54      | 28.70      | 21.08 |
+| Chameleon-7B            | 0.0       | 26.46      | 27.93      | 18.13 |
 
 ## Major Findings
 * Models can truly recognize visual semantics through text inputs.
