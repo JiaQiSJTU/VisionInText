@@ -69,7 +69,31 @@ Here are descriptions for some important properties of each sample:
 * `image_path`: the path to the image modality of the ASCII art.
 
 Statistics of ASCIIEval and ASCIITune are as follows:
-
+<table><thead>
+  <tr>
+    <th></th>
+    <th>#Samples</th>
+    <th>#Concepts</th>
+    <th>#Characters<br>(Min / Max / Avg)</th>
+    <th>#Lines<br>(Min / Max / Avg)</th>
+  </tr></thead>
+<tbody>
+  <tr>
+    <td>ASCIIEval</td>
+    <td>3,526</td>
+    <td>359</td>
+    <td>4 / 15,282 / 63,553</td>
+    <td>1 / 100 / 16.97</td>
+  </tr>
+  <tr>
+    <td>ASCIITune</td>
+    <td>11,836</td>
+    <td>2,307</td>
+    <td>1 / 13,569 / 62,238</td>
+    <td>1 / 97 / 15.22</td>
+  </tr>
+</tbody>
+</table>
 
 
 ## Evaluation
