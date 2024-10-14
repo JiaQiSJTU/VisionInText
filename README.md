@@ -13,7 +13,7 @@
 Understanding visual semantics embedded in consecutive characters is a crucial capability for both large language models (LLMs) and multi-modal large language models (MLLMs). This type of artifact possesses the unique characteristic that identical information can be readily formulated in both texts and images, making them a significant proxy for analyzing how capable modern LLMs and MLLMs are in modality-agnostic vision understanding. In this project, we select ASCII art as a representative artifact, where the lines and brightness used to depict each concept are rendered by characters, and we frame the problem as an ASCII art recognition task. The data and codes for fine-tuning and evaluating models' performance are presented in this repository.
 
 <h1 align="center">
-<img src="./examples.pdf" alt="ASCIIEval Examples"/>
+<img src="./examples.png" alt="ASCIIEval Examples"/>
 <br>
 </h1>
 
