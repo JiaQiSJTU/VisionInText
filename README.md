@@ -180,7 +180,7 @@ Performance of MLLMs measured by Macro-average accuracy (%) among concepts in AS
 | Chameleon-30B           | 0.01      | 34.54      | 28.70      | 21.08 |
 | Chameleon-7B            | 0.0       | 26.46      | 27.93      | 18.13 |
 
-## Major Findings
+## Major Findings & Future Directions
 * Models can truly recognize visual semantics through text inputs.
 * There is an oversight in modality fusion that hinders MLLMs from answering questions flexibly among modality-agnostic visual signals.
 * LLMs and MLLMs show different trends in model performance when provided with different
