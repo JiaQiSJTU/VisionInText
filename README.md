@@ -136,30 +136,30 @@ Here, `mode` represents different input modality setting, including `text-only`,
 
 Performance of LLMs measured by Macro-average accuracy (%) among concepts in ASCIIEval is:
 
-|                             | ASCIIEval (Text-only) | activities | animals & nature | food & drink | objects | smileys & people | symbols | travel  |
-|-----------------------------|-----------------------|------------|------------------|--------------|---------|------------------|---------|---------|
-| GPT-4o                      | 42.88                 |            |                  |              |         |                  |         |         |
-| Gemini-1.5-pro              | 33.49                 |            |                  |              |         |                  |         |         |
-| Gemma-2-27B-it              | 32.36                 |            |                  |              |         |                  |         |         |
-| Llama-3.1-405B-Instruct     | 32.31                 |            |                  |              |         |                  |         |         |
-| Llama-3.1-70B-Instruct      | 31.27                 |            |                  |              |         |                  |         |         |
-| Qwen2-72B-Instruct          | 30.73                 |            |                  |              |         |                  |         |         |
-| Gemma-2-9B-it               | 30.50                 |            |                  |              |         |                  |         |         |
-| Llama-3-70B-Instruct        | 30.42                 |            |                  |              |         |                  |         |         |
-| Qwe.1.5-110B-Chat           | 30.28                 |            |                  |              |         |                  |         |         |
-| Llama-3-8B-Instruct         | 28.71                 |            |                  |              |         |                  |         |         |
-| Mixtral-8x22B-Instruct-v0.1 | 28.20                 |            |                  |              |         |                  |         |         |
-| Llama-2-70B-Chat            | 28.08                 |            |                  |              |         |                  |         |         |
-| Qwen2-7B-Instruct           | 27.71                 |            |                  |              |         |                  |         |         |
-| Llama-3.1-8B-Instruct       | 27.22                 |            |                  |              |         |                  |         |         |
-| Mistral-7B-Instruct-v0.1    | 26.88                 |            |                  |              |         |                  |         |         |
-| Qwen1.5-7B-Chat             | 26.71                 |            |                  |              |         |                  |         |         |
-| Mistral-7B-Instruct-v0.2    | 26.28                 |            |                  |              |         |                  |         |         |
-| Llama-2-13B-Chat            | 25.93                 |            |                  |              |         |                  |         |         |
-| Mistral-7B-Instruct-v0.3    | 25.57                 |            |                  |              |         |                  |         |         |
-| Mistral-8x7B-Instruct-v0.1  | 25.31                 |            |                  |              |         |                  |         |         |
-| Llama-2-7B-Chat             | 24.59                 |            |                  |              |         |                  |         |         |
-| Qwen-7B-Chat                | 23.30                 |            |                  |              |         |                  |         |         |
+|                             | ASCIIEval (Text-only) | Link |
+|-----------------------------|-----------------------|------|
+| GPT-4o                      | 42.88                 |      |
+| Gemini-1.5-pro              | 33.49                 |      |
+| Gemma-2-27B-it              | 32.36                 |      |
+| Llama-3.1-405B-Instruct     | 32.31                 |      |
+| Llama-3.1-70B-Instruct      | 31.27                 |      |
+| Qwen2-72B-Instruct          | 30.73                 |      |
+| Gemma-2-9B-it               | 30.50                 |      |
+| Llama-3-70B-Instruct        | 30.42                 |      |
+| Qwe.1.5-110B-Chat           | 30.28                 |      |
+| Llama-3-8B-Instruct         | 28.71                 |      |
+| Mixtral-8x22B-Instruct-v0.1 | 28.20                 |      |
+| Llama-2-70B-Chat            | 28.08                 |      |
+| Qwen2-7B-Instruct           | 27.71                 |      |
+| Llama-3.1-8B-Instruct       | 27.22                 |      |
+| Mistral-7B-Instruct-v0.1    | 26.88                 |      |
+| Qwen1.5-7B-Chat             | 26.71                 |      |
+| Mistral-7B-Instruct-v0.2    | 26.28                 |      |
+| Llama-2-13B-Chat            | 25.93                 |      |
+| Mistral-7B-Instruct-v0.3    | 25.57                 |      |
+| Mistral-8x7B-Instruct-v0.1  | 25.31                 |      |
+| Llama-2-7B-Chat             | 24.59                 |      |
+| Qwen-7B-Chat                | 23.30                 |      |
 
 ### MLLM Leaderboard
 
