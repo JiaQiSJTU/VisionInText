@@ -51,6 +51,8 @@ Major requirements are listed in `requirements.txt`. The specific version of the
 
 ## Data
 
+We express our gratitude to the ASCII artists whose fantastic creations underpin our research. In order to assess the visual perception abilities of models, we made slight modifications to the original ASCII art for the test set ASCIIEval. Meanwhile, we retained the original ASCII art (`original_ascii_art`) and provided the URL (`url`) to the data source. It is important to note that our data is licensed under CC BY NC 4.0, which permits only non-commercial use and is intended exclusively for research purposes.
+
 Some examplified training (ASCIITune) and test data (ASCIIEval) are provided in `./data`. 
 
 To begin with, please collect the images for each ASCII art by:
@@ -66,7 +68,8 @@ Here are descriptions for some important properties of each sample:
 * `labels`: the corresponding label for each choice.
 * `image_path`: the path to the image modality of the ASCII art.
 
-We express our gratitude to the ASCII artists whose fantastic creations underpin our research. In order to assess the visual perception abilities of models, we made slight modifications to the original ASCII art for the test set ASCIIEval. Meanwhile, we retained the original ASCII art (`original_ascii_art`) and provided the URL (`url`) to the data source. It is important to note that our data is licensed under CC BY NC 4.0, which permits only non-commercial use and is intended exclusively for research purposes.
+Statistics of ASCIIEval and ASCIITune are as follows:
+
 
 
 ## Evaluation
