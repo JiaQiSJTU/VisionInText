@@ -5,7 +5,8 @@
 <div align= "center">
 <p>
 <a href="https://arxiv.org/abs/2410.01733">📖 Arxiv</a> |
-<!-- <a href="https://huggingface.co/datasets">🤗 Dataset</a> | -->
+<a href="https://huggingface.co/datasets/ASCIIEval/ASCIIEval">🤗 ASCIIEval Dataset</a> |
+<a href="https://huggingface.co/datasets/ASCIIEval/ASCIITune">🤗 ASCIITune Dataset</a>
 <!-- <a href="https://asciieval.github.io/">🌐 Website</a>  -->
 </p>
 </div>
