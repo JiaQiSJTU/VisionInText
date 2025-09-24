@@ -2,45 +2,25 @@
     <h1> Visual Perception in Text Strings </h1>
 </div>
 
-<div align= "center">
-<p>
-<a href="https://arxiv.org/abs/2410.01733">📖 Arxiv</a> |
-<a href="https://huggingface.co/datasets/ASCIIEval/ASCIIEval">🤗 ASCIIEval Dataset</a> |
-<a href="https://huggingface.co/datasets/ASCIIEval/ASCIITune">🤗 ASCIITune Dataset</a>
-<!-- <a href="https://asciieval.github.io/">🌐 Website</a>  -->
-</p>
-</div>
 
-Understanding visual semantics embedded in consecutive characters is a crucial capability for both large language models (LLMs) and multi-modal large language models (MLLMs). This type of artifact possesses the unique characteristic that identical information can be readily formulated in both texts and images, making them a significant proxy for analyzing how capable modern LLMs and MLLMs are in modality-agnostic vision understanding. In this project, we select ASCII art as a representative artifact, where the lines and brightness used to depict each concept are rendered by characters, and we frame the problem as an ASCII art recognition task. The data and codes for fine-tuning and evaluating models' performance are presented in this repository.
+Perceiving visual semantics embedded within consecutive characters is a crucial yet under-explored capability for both Large Language Models (LLMs) and Multi-modal Large Language Models (MLLMs). In this work, we select ASCII art as a representative artifact. It depicts concepts through careful arrangement of characters, which can be formulated in both text and image modalities. We frame the problem as a recognition task, and construct a novel benchmark, ASCIIEval. It covers over 3K samples with an elaborate categorization tree, along with a training set for further enhancement. Encompassing a comprehensive analysis of tens of models through different input modalities, our benchmark demonstrate its multi-faceted diagnostic power. 
+* For textual input, proprietary models exhibit the ability for recognizing ASCII art concepts with over 70% accuracy on certain categories, but open-source LLMs lags far behind. We propose rationale-assisted fine-tuning to bridge this gap, which elevates the open-source LLMs performance relatively by 26.10%. 
+* For image inputs, we reveal that the latest open-source MLLMs over-emphasize fine-grained text recognition at the expense of perceiving collective visual information, leading to the dramatic gap of over 37% accuracy compared with GPT-5. To address this, we introduce a test-time, low-resolution prompting strategy and a vision-focused fine-tuning approach to activate models' perception ability.
+* Another critical finding is that model performance is sensitive to the length of the ASCII art, with this sensitivity varying across input modalities. Unfortunately, none of the models could successfully benefit from the simultaneous provision of both modalities, highlighting the need for more flexible modality-fusion approaches.
+
 
 <h1 align="center">
-<img src="./examples.png" alt="ASCIIEval Examples"/>
+<img src="./illustration.png" alt="Overview of ASCIIEval"/>
 <br>
 </h1>
 
-## Motivation
-
-For *LLMs*:
-* Language models are **capable** of encoding visual information through escape characters, such as "\n" and "\t".
-* Visual information is **ubiquitous** in a wide range of text processing tasks, such as
-processing tabular data and playing board games.
-* Using visual information reflected in characters to break through the defense line is becoming a threat to LLM **safety** issues. Better understanding LLMs' visual perception ability to make proactive defense is in urgent need.
-
-For *MLLMs*:
-* A new perspective of understanding MLLMs visual perception ability and the degree of modality fusion.
-*  MLLMs are expected to perform **robustly among different modalities**, when visual information in different modalities is provided individually. 
-*  MLLMs are expected to **take the best of both worlds** when two modalities are presented simultaneously and demonstrate stronger vision understanding ability.
-
-
-
-***Note that this repository is still under construction, please stay tuned for further update.***
 
 ## Installation
 
 Clone this repo into your working directory and setup the environment:
 
 ```python
-git clone https://github.com/JiaQiSJTU/VisionInText.git
+git clone xxx
 cd ASCIIEval
 conda create -n ascii python=3.10
 conda activate ascii
@@ -101,7 +81,7 @@ Statistics of ASCIIEval and ASCIITune are as follows:
 
 To evaluate LLMs on ASCIIEval locally:
 ```bash
-CUDA_VISIBLE_DEVICES=xxx python3 src/evaluation.py --model_dir /path/to/the/model --model_template xxx --output_file_path xxx.jsonl
+CUDA_VISIBLE_DEVICES=xxx python3 src/evaluation.py --model_dir /path/to/the/model --output_file_path xxx.jsonl
 
 ```
 
@@ -114,7 +94,7 @@ CUDA_VISIBLE_DEVICES=xxx python3 src/evaluation_mm.py --model_dir /path/to/the/m
 To evaluate models through API:
 ```bash
 export API_KEY=xxx
-python3 src/evaluation_by_api.py --api_key $API_KEY --model_name xxx --base_url https://xxxxxxxx/v1 --template_name xxx --output_file_path xxx.jsonl --mode text-only
+python3 src/evaluation_by_api.py --api_key $API_KEY --model_name xxx --base_url https://xxxxxxxx/v1 --output_file_path xxx.jsonl --mode text-only
 ```
 
 ## Fine-tuning
@@ -122,6 +102,7 @@ python3 src/evaluation_by_api.py --api_key $API_KEY --model_name xxx --base_url 
 To fine-tune an LLM on ASCIITune:
 ```bash
 bash script/train_LLM.sh 
+bash script/train_LLM_w_rational.sh
 ```
 
 To fine-tune an MLLM on ASCIITune:
@@ -129,72 +110,3 @@ To fine-tune an MLLM on ASCIITune:
 bash script/train_MLLM.sh
 ```
 Here, `mode` represents different input modality setting, including `text-only`, `image-only`, `both` and `random`.
-
-
-## Leaderboard
-
-### LLM Leaderboard
-
-Performance of LLMs measured by Macro-average accuracy (%) among concepts in ASCIIEval is:
-
-|                             | ASCIIEval (Text-only) | Link |
-|-----------------------------|-----------------------|------|
-| GPT-4o                      | 42.88                 |      |
-| Gemini-1.5-pro              | 33.49                 |      |
-| Gemma-2-27B-it              | 32.36                 |      |
-| Llama-3.1-405B-Instruct     | 32.31                 |      |
-| Llama-3.1-70B-Instruct      | 31.27                 |      |
-| Qwen2-72B-Instruct          | 30.73                 |      |
-| Gemma-2-9B-it               | 30.50                 |      |
-| Llama-3-70B-Instruct        | 30.42                 |      |
-| Qwe.1.5-110B-Chat           | 30.28                 |      |
-| Llama-3-8B-Instruct         | 28.71                 |      |
-| Mixtral-8x22B-Instruct-v0.1 | 28.20                 |      |
-| Llama-2-70B-Chat            | 28.08                 |      |
-| Qwen2-7B-Instruct           | 27.71                 |      |
-| Llama-3.1-8B-Instruct       | 27.22                 |      |
-| Mistral-7B-Instruct-v0.1    | 26.88                 |      |
-| Qwen1.5-7B-Chat             | 26.71                 |      |
-| Mistral-7B-Instruct-v0.2    | 26.28                 |      |
-| Llama-2-13B-Chat            | 25.93                 |      |
-| Mistral-7B-Instruct-v0.3    | 25.57                 |      |
-| Mistral-8x7B-Instruct-v0.1  | 25.31                 |      |
-| Llama-2-7B-Chat             | 24.59                 |      |
-| Qwen-7B-Chat                | 23.30                 |      |
-
-### MLLM Leaderboard
-
-Performance of MLLMs measured by Macro-average accuracy (%) among concepts in ASCIIEval with different input modalities is:
-
-|                         | Text-only | Image-only | Text-Image | AVG   |
-|-------------------------|-----------|------------|------------|-------|
-| GPT-4o                  | 42.88     | 82.68      | 76.52      | 67.36 |
-| CogVLM2-Llama3-chat-19B | 24.73     | 67.80      | 66.68      | 53.07 |
-| Llava-v1.6-34B          | 28.62     | 65.66      | 61.33      | 51.87 |
-| Gemini-1.5-pro          | 33.49     | 60.69      | 58.33      | 50.84 |
-| Llava-v1.5-13B          | 26.00     | 61.87      | 60.70      | 49.52 |
-| Llava-v1.5-7B           | 24.66     | 62.18      | 61.52      | 49.45 |
-| Llava-v1.6-mistral-7B   | 25.89     | 60.72      | 59.02      | 48.54 |
-| Llava-v1.6-vicuna-13B   | 26.03     | 59.70      | 56.55      | 47.43 |
-| CogVLM-Chat-hf          | 21.25     | 61.00      | 57.58      | 46.61 |
-| Qwen-VL-Chat            | 24.79     | 52.32      | 40.09      | 39.10 |
-| Chameleon-30B           | 0.01      | 34.54      | 28.70      | 21.08 |
-| Chameleon-7B            | 0.0       | 26.46      | 27.93      | 18.13 |
-
-## Major Findings & Future Directions
-* Models can truly recognize visual semantics through text inputs.
-* There is an oversight in modality fusion that hinders MLLMs from answering questions flexibly among modality-agnostic visual signals.
-* LLMs and MLLMs show different trends in model performance when provided with different
-input modalities and excel at different ASCII art categories.
-* Better training strategies or model architectures are required for optimizing modality-agnostic visual perception in text strings. 
-
-## Citation
-
-```
-@article{jia2024visual,
-  title={Visual Perception in Text Strings},
-  author={Jia, Qi and Yue, Xiang and Huang, Shanshan and Qin, Ziheng and Liu, Yizhu and Lin, Bill Yuchen and You, Yang},
-  journal={arXiv preprint arXiv:2410.01733},
-  year={2024}
-}
-```
