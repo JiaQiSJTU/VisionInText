@@ -3,10 +3,10 @@
 </div>
 
 
-Perceiving visual semantics embedded within consecutive characters is a crucial yet under-explored capability for both Large Language Models (LLMs) and Multi-modal Large Language Models (MLLMs). In this work, we select ASCII art as a representative artifact. It depicts concepts through careful arrangement of characters, which can be formulated in both text and image modalities. We frame the problem as a recognition task, and construct a novel benchmark, ASCIIEval. It covers over 3K samples with an elaborate categorization tree, along with a training set for further enhancement. Encompassing a comprehensive analysis of tens of models through different input modalities, our benchmark demonstrate its multi-faceted diagnostic power. 
-* For textual input, proprietary models exhibit the ability for recognizing ASCII art concepts with over 70% accuracy on certain categories, but open-source LLMs lags far behind. We propose rationale-assisted fine-tuning to bridge this gap, which elevates the open-source LLMs performance relatively by 26.10%. 
-* For image inputs, we reveal that the latest open-source MLLMs over-emphasize fine-grained text recognition at the expense of perceiving collective visual information, leading to the dramatic gap of over 37% accuracy compared with GPT-5. To address this, we introduce a test-time, low-resolution prompting strategy and a vision-focused fine-tuning approach to activate models' perception ability.
-* Another critical finding is that model performance is sensitive to the length of the ASCII art, with this sensitivity varying across input modalities. Unfortunately, none of the models could successfully benefit from the simultaneous provision of both modalities, highlighting the need for more flexible modality-fusion approaches.
+Perceiving visual semantics embedded within consecutive characters is a crucial yet under-explored capability for both Large Language Models (LLMs) and Multi-modal Large Language Models (MLLMs). In this work, we select ASCII art as a representative artifact. It depicts concepts through careful arrangement of characters, which can be formulated in both text and image modalities. We frame the problem as a recognition task, and construct a novel benchmark, ASCIIEval. It covers over 3K samples with an elaborate categorization tree, along with a training set for further enhancement. Encompassing a comprehensive analysis of tens of models through different input modalities, our benchmark demonstrate its multi-faceted diagnostic power: 
+* **LLMs demonstrate the ability to comprehend visual information solely from textual input.** For textual input, proprietary models exhibit the ability for recognizing ASCII art concepts with over 70% accuracy on certain categories, but open-source LLMs lags far behind. We propose rationale-assisted fine-tuning to bridge this gap, which elevates the open-source LLMs performance relatively by 26.10%. 
+* **MLLMs exhibit limited visual generalization capabilities, and reveal a seesaw effect between their OCR and ASCII art recognition performance.** For image inputs, we reveal that the latest open-source MLLMs over-emphasize fine-grained text recognition at the expense of perceiving collective visual information, leading to the dramatic gap of over 37% accuracy compared with GPT-5. To address this, we introduce a test-time, low-resolution prompting strategy and a vision-focused fine-tuning approach to activate models' perception ability.
+* **The inability to dynamically integrate congruent cross-modal signals impedes current models.** Another critical finding is that model performance is sensitive to the length of the ASCII art, with this sensitivity varying across input modalities. Unfortunately, none of the models could successfully benefit from the simultaneous provision of both modalities, highlighting the need for more flexible modality-fusion approaches.
 
 
 <h1 align="center">
@@ -20,8 +20,8 @@ Perceiving visual semantics embedded within consecutive characters is a crucial 
 Clone this repo into your working directory and setup the environment:
 
 ```python
-git clone xxx
-cd ASCIIEval
+git clone https://github.com/JiaQiSJTU/VisionInText
+cd VisionInText
 conda create -n ascii python=3.10
 conda activate ascii
 pip install -r requirements.txt
@@ -110,3 +110,5 @@ To fine-tune an MLLM on ASCIITune:
 bash script/train_MLLM.sh
 ```
 Here, `mode` represents different input modality setting, including `text-only`, `image-only`, `both` and `random`.
+
+
