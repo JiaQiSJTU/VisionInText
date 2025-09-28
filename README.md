@@ -19,7 +19,7 @@ Perceiving visual semantics embedded within consecutive characters is a crucial 
 
 
 <h1 align="center">
-<img src="./illustration.png" alt="Overview of ASCIIEval"/>
+<img src="illustration.png" alt="Overview of ASCIIEval"/>
 <br>
 </h1>
 
