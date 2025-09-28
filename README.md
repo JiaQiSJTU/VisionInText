@@ -11,7 +11,18 @@
 </p>
 </div>
 
-[toc]
+**TABLE OF CONTENTS**
+- [Introduction](#introduction)
+- [Usage](#usage)
+  - [Installation](#installation)
+  - [Data](#data)
+  - [Evaluation](#evaluation)
+  - [Fine-tuning](#fine-tuning)
+- [Leaderboards](#leaderboards)
+  - [Leaderboard for Textual Input](#leaderboard-for-textual-input)
+  - [Leaderboard for Image Input](#leaderboard-for-image-input)
+  - [Leaderboard for Average Cross-Modality Performance](#leaderboard-for-average-cross-modality-performance)
+- [Citation](#citation)
 
 # Introduction
 
@@ -22,6 +33,7 @@ Perceiving visual semantics embedded within consecutive characters is a crucial 
 <img src="illustration.png" alt="Overview of ASCIIEval" width="800"/>
 </div>
 
+# Usage
 
 ## Installation
 
@@ -120,8 +132,9 @@ bash script/train_MLLM.sh
 Here, `mode` represents different input modality setting, including `text-only`, `image-only`, `both` and `random`.
 
 
+# Leaderboards
 
-# Leaderboard for Textual Input
+## Leaderboard for Textual Input
 
 **LLMs demonstrate the ability to comprehend visual information solely from textual input.** For textual input, proprietary models exhibit the ability for recognizing ASCII art concepts with over 70% accuracy on certain categories, but open-source LLMs lags far behind. We propose rationale-assisted fine-tuning to bridge this gap, which elevates the open-source LLMs performance relatively by 26.10%. 
 
@@ -168,7 +181,7 @@ Here, `mode` represents different input modality setting, including `text-only`,
 
 
 
-# Leaderboard for Image Input
+## Leaderboard for Image Input
 
 **MLLMs exhibit limited visual generalization capabilities, and reveal a seesaw effect between their OCR and ASCII art recognition performance.** For image inputs, we reveal that the latest open-source MLLMs over-emphasize fine-grained text recognition at the expense of perceiving collective visual information, leading to the dramatic gap of over 37% accuracy compared with GPT-5. To address this, we introduce a test-time, low-resolution prompting strategy and a vision-focused fine-tuning approach to activate models' perception ability.
 
@@ -228,7 +241,7 @@ Here, `mode` represents different input modality setting, including `text-only`,
 
 
 
-## Citation
+# Citation
 
 ```
 @misc{jia2025asciieval,
