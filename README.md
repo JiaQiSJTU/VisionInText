@@ -18,10 +18,9 @@
 Perceiving visual semantics embedded within consecutive characters is a crucial yet under-explored capability for both Large Language Models (LLMs) and Multi-modal Large Language Models (MLLMs). In this work, we select ASCII art as a representative artifact. It depicts concepts through careful arrangement of characters, which can be formulated in both text and image modalities. We frame the problem as a recognition task, and construct a novel benchmark, ASCIIEval. It covers over 3K samples with an elaborate categorization tree, along with a training set for further enhancement. Encompassing a comprehensive analysis of tens of models through different input modalities, our benchmark demonstrate its multi-faceted diagnostic power. 
 
 
-<h1 align="center">
-<img src="illustration.png" alt="Overview of ASCIIEval"/>
-<br>
-</h1>
+<div align="center">
+<img src="illustration.png" alt="Overview of ASCIIEval" width="800"/>
+</div>
 
 
 ## Installation
