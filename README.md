@@ -1,5 +1,5 @@
 <div align= "center">
-    <h1> Visual Perception in Text Strings </h1>
+    <h1> [ICLR2026] ASCIIEval: Benchmarking Models' Visual Perception in Text Strings via ASCII Art </h1>
 </div>
 
 <div align= "center">
@@ -244,11 +244,11 @@ Here, `mode` represents different input modality setting, including `text-only`,
 # Citation
 
 ```
-@misc{jia2025asciieval,
-      title={ASCIIEval: Benchmarking Models' Visual Perception in Text Strings via ASCII Art}, 
-      author={Qi Jia and Xiang Yue and Shanshan Huang and Ziheng Qin and Yizhu Liu and Bill Yuchen Lin and Yang You and Guangtao Zhai},
-      year={2025},
-      eprint={2410.01733},
-      archivePrefix={arXiv}
+@inproceedings{jia2026asciieval,
+title={{ASCIIE}val: Benchmarking Models' Visual Perception in Text Strings via {ASCII} Art},
+author={Qi Jia and Xiang Yue and Shanshan Huang and Ziheng Qin and Yizhu Liu and Bill Yuchen Lin and Yang You and Guangtao Zhai},
+booktitle={The Fourteenth International Conference on Learning Representations},
+year={2026},
+url={https://openreview.net/forum?id=qg7zOTPtg6}
 }
 ```
